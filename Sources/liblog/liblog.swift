@@ -8,14 +8,14 @@ public struct Log {
 #if canImport(OSLog)
 	private var native: Logger
 
-	init(
+	public init(
 		subsystem: String = Bundle.main.bundleIdentifier ?? "app",
    	category: String = "general"
 	) {
 		native = .init(subsystem: subsystem, category: category)
 	}
 #else
-	init(
+	public init(
 		subsystem: String = "",
 		category: String = ""
 	) {} // We do nothing - no data is needed here.
