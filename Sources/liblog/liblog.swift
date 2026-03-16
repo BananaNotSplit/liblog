@@ -4,7 +4,7 @@ import OSLog
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
 
-public struct Log {
+public struct Log: Sendable {
 #if canImport(OSLog)
 	private var native: Logger
 
